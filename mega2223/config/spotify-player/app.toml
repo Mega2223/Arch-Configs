@@ -50,7 +50,7 @@ playlist_percent = 40
 album_percent = 40
 
 [device]
-name = "MELCHIOR"
+name = "CASPER"
 device_type = "speaker"
 volume = 70
 bitrate = 320
