@@ -78,7 +78,8 @@
         "format-wifi" : "WIFI",
         "format-ethernet": "ETHER",
         "format-disconnected" : "NO-CON",
-        "tooltip": false
+        "tooltip": false,
+	"on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
@@ -92,15 +93,18 @@
     },
 
 "mpris": {
-	"format": "{player_icon} {title} [{length}]",
+	"format": "{player_icon} {title} [{position}/{length}]",
 	"format-paused": "{status_icon}",
 	"player-icons": {
-		"default": " >",
-		"mpv": "🎵"
+		"default": " >"
+		//"mpv": "🎵 ",
+		//"max-length": 15
 	},
 	"status-icons": {
 		//"paused": "⏸"
-		"paused": "[PS]"
-	}
+		"paused": " > [PS]"
+	},
+	"title-len":30
+	//"max-length":30
 	}
 }
