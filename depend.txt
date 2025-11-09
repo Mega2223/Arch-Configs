@@ -1,0 +1,13 @@
+#TODO unfinished
+cava
+fish
+hyprland
+neofetch
+hyfetch
+openttd
+spotify-player
+waybar
+nvim
+kitty
+hyprlctl
+
