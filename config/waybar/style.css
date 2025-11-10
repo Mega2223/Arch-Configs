@@ -101,8 +101,9 @@ tooltip {
     border: 2px solid #6f0000;
     color: #ff0000;
 }
-#battery.Charging {
+#battery.charging {
     color: #009900;
+    border: 2px solid #009900;
 }
 
 
