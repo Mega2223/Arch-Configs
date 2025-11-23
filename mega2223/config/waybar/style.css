@@ -7,7 +7,6 @@
     /*background-color: #000000;*/
     /*font-weight: bold;*/
     font-size: 20px;
-
     padding: 0;
 }
 
@@ -17,11 +16,14 @@ button{
 
 window#waybar {
     background: #000000;
+    color: #550000;
     border-bottom: 0;
 }
 
-tooltip {
-    background-color: #000000;
+tooltip, tooltip label {
+    /*background-color: #0000F0;*/
+    color: #CC0000;
+    /*font-size: 44px;*/
     /*border: 2px solid #CC0000;*/
 }
 
@@ -85,7 +87,12 @@ tooltip {
 #pulseaudio {
     background-color: #000000;
     border: 2px solid #af0000;
-    /*color: #4e02b8;*/
+    color: #af0000;
+}
+
+#mpris
+{
+    color: #af0000;
 }
 
 #cpu.critical,
