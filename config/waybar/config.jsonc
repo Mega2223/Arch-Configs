@@ -19,6 +19,7 @@
     ],
 
     "modules-right": [
+        "custom/work_clock",
         "tray",
         "cpu_text",
         "cpu",
@@ -92,19 +93,24 @@
         "tooltip": false
     },
 
-"mpris": {
-	"format": "{player_icon} {title} [{position}/{length}]",
-	"format-paused": "{status_icon}",
-	"player-icons": {
-		"default": " >"
-		//"mpv": "🎵 ",
-		//"max-length": 15
+    "mpris": {
+	    "format": "{player_icon} {title} [{position}/{length}]",
+	    "format-paused": "{status_icon}",
+	    "player-icons": {
+	        "default": " >"
+		    //"mpv": "🎵 ",
+		    //"max-length": 15
+	    },
+	    "status-icons": {
+		    //"paused": "⏸"
+		    "paused": " > [PS]"
+	    },
+	    "title-len":30
+	    //"max-length":30
 	},
-	"status-icons": {
-		//"paused": "⏸"
-		"paused": " > [PS]"
-	},
-	"title-len":30
-	//"max-length":30
-	}
+
+    "custom/work_clock":{
+        "format": "{} ",
+        "exec": "work_clock 12:00 18:30 --end_empty"
+    }
 }
