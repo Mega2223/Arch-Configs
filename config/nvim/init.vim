@@ -8,4 +8,3 @@ source ~/.vimrc
 lua require('config.lazy')
 lua require('config.lua_ls')
 
-
