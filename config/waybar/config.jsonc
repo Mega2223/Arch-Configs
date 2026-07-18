@@ -105,12 +105,15 @@
 		    //"paused": "⏸"
 		    "paused": " > [PS]"
 	    },
-	    "title-len":30
+	    "title-len":30,
+        "interval": 1
 	    //"max-length":30
 	},
 
     "custom/work_clock":{
         "format": "{} ",
-        "exec": "work_clock 12:00 18:30 --end_empty"
+        "exec-if": "expr $(date +%u) '<' 6 >> /dev/null", // dias da semana
+        "exec": "work_clock 12:00 18:30 --once --end_empty",
+        "interval": 1
     }
 }
