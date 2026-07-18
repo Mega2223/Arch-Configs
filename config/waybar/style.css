@@ -3,7 +3,7 @@
     border-radius: 0;
     min-height: 0;
     font-family: "ModernDOS8X8", "Comic Sans";
-    color: #4e02b8;
+    /*color: #4e02b8;*/
     /*font-weight: bold;*/
     font-size: 20px;
 
@@ -46,9 +46,14 @@ tooltip {
     color: #4e02b8;
 }
 
-#workspaces button.focused {
-    color: #ddc7a1;
+/*#workspaces button.active {
+    color: #ff0000; ?
+    background-color: #4e0244;
 }
+
+#workspaces button.active  {
+    color: red;
+}*/
 
 #workspaces button.urgent {
     background-color: #e78a4e;
@@ -106,4 +111,6 @@ tooltip {
     border: 2px solid #009900;
 }
 
-
+#custom-work_clock, #mpris, #playerctl {
+    color: #4e02b8;
+}
