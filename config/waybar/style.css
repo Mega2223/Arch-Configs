@@ -10,6 +10,13 @@
     padding: 0;
 }
 
+@keyframes blink{
+    from {opacity: 0}
+    50% {opacity: 0}
+    50.001% {opacity: 100;}
+    to{opacity: 100;}
+}
+
 window#waybar {
     background: #000000;
     border-bottom: 0;
@@ -50,14 +57,18 @@ tooltip {
     color: #ff0000; ?
     background-color: #4e0244;
 }
+*/
 
-#workspaces button.active  {
+/*workspaces button.active  {
     color: red;
+    background-color: red;
 }*/
 
+
 #workspaces button.urgent {
-    background-color: #e78a4e;
-    color: #1d2021;
+    /*background-color: #e78a4e;
+    color: #1d2021;*/
+    animation: blink 2s infinite;
 }
 
 /*#clock {
