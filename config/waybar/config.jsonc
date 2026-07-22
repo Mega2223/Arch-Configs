@@ -112,8 +112,8 @@
 
     "custom/work_clock":{
         "format": "{} ",
-        "exec-if": "expr $(date +%u) '<' 6 >> /dev/null", // dias da semana
-        "exec": "work_clock 12:00 18:30 --once --end_empty",
-        "interval": 1
+        //"exec-if": "expr $(date +%u) '<' 5 \\& $(date +%H) '<' 19 >> /dev/null", // dias da semana
+        "exec": "work_clock 12:00 18:30 --once --end_empty --empty-before"//,
+        //"interval": 1
     }
 }
