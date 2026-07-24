@@ -1,0 +1,14 @@
+[Unit]
+Description=Meu opencloud mto foda
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=mega2223
+ExecStart=/home/mega2223/builds/opencloud/opencloud/run.sh
+
+[Install]
+WantedBy=multi-user.target
