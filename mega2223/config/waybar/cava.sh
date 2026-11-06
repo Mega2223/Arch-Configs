@@ -2,7 +2,7 @@
 # https://github.com/ray-pH/waybar-cava
 
 #bar="▁▂▃▄▅▆▇█"
-bar="⠀▁▂▃▄▅▆▇█"
+bar="_▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
 # creating "dictionary" to replace char with bar
@@ -25,6 +25,8 @@ raw_target = /dev/stdout
 data_format = ascii
 ascii_max_range = 7
 " > $config_file
+
+echo $dict
 
 # read stdout from cava
 cava -p $config_file | while read -r line; do

@@ -1,7 +1,8 @@
+[
 {
     "layer": "top",
     "spacing": 0,
-    "height": 0,
+    "height": 36,
 
     "margin-top": 0,
     "margin-right": 0,
@@ -19,6 +20,7 @@
     ],
 
     "modules-right": [
+        "custom/notification",
         "tray",
         "cpu_text",
         "cpu",
@@ -91,20 +93,57 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
-
-"mpris": {
-	"format": "{player_icon} {title} [{position}/{length}]",
-	"format-paused": "{status_icon}",
-	"player-icons": {
-		"default": " >"
-		//"mpv": "🎵 ",
-		//"max-length": 15
-	},
-	"status-icons": {
-		//"paused": "⏸"
-		"paused": " > [PS]"
-	},
-	"title-len":30
-	//"max-length":30
-	}
+    "mpris": {
+        "format": "{player_icon} {title} [{position}/{length}]",
+        "format-paused": "{status_icon}",
+        "interval": 1,
+        "player-icons": {
+            "default": " >"
+            //"mpv": "🎵 ",
+            //"max-length": 15
+        },
+        "status-icons": {
+            //"paused": "⏸"
+            "paused": " > [PS]"
+        },
+        "title-len":30
+        //"on-middle-click": "playerctld shift" já tem atribuição, deixei o SUPER + F6/F7 pra fazer isso
+        //"max-length":30
+    },
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "* ",
+            "none": "= ",
+            "dnd-notification": ": ",
+            "dnd-none": "_ ",
+            "inhibited-notification": "| ",
+            "inhibited-none": "_ ",
+            "dnd-inhibited-notification": ". ",
+            "dnd-inhibited-none": "_ "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    }
+},
+{
+    "name": "overlay",
+    "margin-top": -36,
+    "height": 36,
+    "layer": "bottom",
+    "passtrough": true,
+    "exclusive": false,
+    "modules-center": [
+        "custom/cava"
+    ],
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh"
+    }
 }
+]
